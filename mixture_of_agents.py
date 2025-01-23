@@ -281,10 +281,20 @@ class MLBCrewManager:
             verbose=False
         )
         
-        return crew.kickoff(inputs={
+        result = crew.kickoff(inputs={
             "user_prompt": user_prompt,
             "default_date": str(default_date)
         })
+        
+        # Save the result to report.txt
+        with open('report.txt', 'w') as f:
+            f.write(f"MLB Game Recap Report\n")
+            f.write(f"Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+            f.write(f"Query: {user_prompt}\n")
+            f.write("-" * 80 + "\n\n")
+            f.write(str(result))
+        
+        return result
 
 if __name__ == "__main__":
     # Create MLB crew manager instance
