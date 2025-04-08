@@ -1,4 +1,4 @@
-# Crewai-Groq: Mixture of Agents summarizing a baseball game from the MLB Stats API
+# Crewai-Groq: Mixture of Agents Summarizing a Baseball Game from the MLB Stats API
 Running a mixture of agents crew with crewAI and groq. This project is a migration of the already existing example https://github.com/groq/groq-api-cookbook/tree/main/tutorials/crewai-mixture-of-agents but there was a lack of documentation regarding the installation. This is addressed in this repository.
 
 ## installation
